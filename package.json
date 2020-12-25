@@ -1,0 +1,28 @@
+{
+  "name": "anarchynexus",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Multifaced API for managed sockets and graphql / rest api usage, with multiple propouses",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4RKAR117/AnarchyNexus.git"
+  },
+  "keywords": [
+    "APi",
+    "Graphql",
+    "Typescript",
+    "WS",
+    "web-sockets",
+    "rest"
+  ],
+  "author": "AnarchyTeam / D4RKAR117",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/D4RKAR117/AnarchyNexus/issues"
+  },
+  "homepage": "https://github.com/D4RKAR117/AnarchyNexus#readme"
+}
