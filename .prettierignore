@@ -1,6 +1,7 @@
 dist/
 !tsconfig.json
 !package.json
+!nodemon.json
 package-lock.json
 !/.*rc.js
 node_modules/*
