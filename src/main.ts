@@ -1,4 +1,4 @@
-// Initial imports
+// Express server imports
 import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
@@ -6,6 +6,13 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
+
+// ORM Imports
+import { createConnection } from 'typeorm';
+import 'reflect-metadata';
+
+// Route Imports
+import userRoutes from '@router/user.routes';
 
 try {
 	dotenv.config(); // Loads env config
@@ -31,10 +38,11 @@ try {
 	const logger: 'tiny' | 'dev' = env === 'production' ? 'tiny' : 'dev';
 	app.use(morgan(logger));
 
-	// define a route handler for the default home page
-	app.get('/', (req, res) => {
-		res.send('Hello world!');
-	});
+	// Initialize DB Connection
+	createConnection();
+
+	// Implement routes from @router
+	app.use(userRoutes);
 
 	// start the Express server
 	app.listen(port, host, () => {
